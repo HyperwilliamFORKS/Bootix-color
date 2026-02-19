@@ -3,14 +3,14 @@ RGBLINK = rgblink
 
 RM_F = rm -f
 
-ASFLAGS = -h
+ASFLAGS =
 LDFLAGS = -t -w -x
 
 bootix_%.bin: bootix_%.o
 	$(RGBLINK) $(LDFLAGS) -o $@ $^
 
 bootix_%.o: bootix_%.asm
-	$(RGBASM) $(ASFLAGS) -o $@ $<
+	$(RGBASM) $(ASFLAGS) $< -o $@
 
 all: $(addsuffix .bin, $(basename $(wildcard bootix_*.asm)))
 
