@@ -1,9 +1,9 @@
 INCLUDE "inc/hardware.inc"
-
-SCX_MAX_OFF     EQU $10
-ANIM_TIMEOUT    EQU 28
-SOUND_TIMEOUT_1 EQU 39
-SOUND_TIMEOUT_2 EQU 394
+INCLUDE "inc/hardware_compat.inc"
+def SCX_MAX_OFF     EQU $10
+def ANIM_TIMEOUT    EQU 28
+def SOUND_TIMEOUT_1 EQU 39
+def SOUND_TIMEOUT_2 EQU 394
 
 SECTION "Bootrom", ROM0[0]
     ; Initialize SP
